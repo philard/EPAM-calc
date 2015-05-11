@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="todo.css">
+		<script data-main="js/calcApp" src="js/lib/require.min.js" ></script>	
+	</head>
+	<body>
+
+		<script type="text/template" id="display-template">
+            <div class="view">
+                <div class="typed">
+                    <span class="evaledExp"><%- evalExp %></span>
+					,
+                    <span class="nextOp"><%- nextOp %></span>
+                </div>
+                <div class="digits"><%- digits %></div>
+            </div>
+		</script>
+
+		
+	
+	
+	
+		<div class="main">
+			<div id="calc">
+				<div id="calc-display">
+				</div>
+				
+				<div id="key-pannel">
+					<div>	
+						<button class="funct">MC</button>
+						<button class="funct">MR</button>
+						<button class="funct">MS</button>
+						<button class="funct">M+</button>
+						<button class="funct">M-;</button>
+					</div>
+					<div>	
+						<button class="funct">&#x232B;</button>
+						<button class="funct">CE</button>
+						<button class="funct">C</button>
+						<button class="numberSym">&#x00B1;</button>
+						<button class="operator">&#x221A;</button>
+					</div>
+					<div>
+						<button class="number">7</button>
+						<button class="number">8</button>
+						<button class="number">9</button>
+						<button class="operator">/</button>
+						<button class="funct">%</button>
+					</div>
+					<div>
+						<button class="number">4</button>
+						<button class="number">5</button>
+						<button class="number">6</button>
+						<button class="operator">*</button>
+						<button class="operator">1/x</button>
+					</div>
+					<div>
+						<button class="number">1</button>
+						<button class="number">2</button>
+						<button class="number">3</button>
+						<button class="operator">-</button>
+						<button class="funct">=</button>
+					</div>
+					<div>
+						<button class="number">0</button>
+						<button class="numberSym">.</button>
+						<button class="operator">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+		<div id="container"></div>
+
+		<section id="todoapp">
+			<header id="header">
+				<h1>Todos</h1>
+				<input id="new-todo" placeholder="What needs to be done?">
+				<div>
+                    <a href="#/">show all</a> |
+                    <a href="#/pending">show pending</a> |
+                    <a href="#/completed">show completed</a>
+                    </div>
+                </header>
+			</header>
+			<section id="main">
+				<ul id="todo-list"></ul>
+			</section>
+		</section>
+	
+	</body>
+	
+
+
+</html>

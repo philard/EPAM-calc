@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="todo.css">
+		<script data-main="js/todoApp" src="js/lib/require.js" ></script>	
+	</head>
+	<body>
+
+		<script type="text/template" id="item-template">
+			<div class="view">
+				<input class="toggle" type="checkbox" 		 
+				    <%= completed ? "checked" : "" %> 
+				>
+				<label><%- title %></label>
+				<input class="edit" value="<%- title %>">
+				<button class="destroy">remove</button>
+			</div>
+		</script>
+	
+	
+	
+		<div class="main">
+			<div class='calc'>
+				<input tye='text' class="display">
+				</div>
+				
+				<div class="keyPanel">
+					<div>
+						<button>7</button>
+						<button>8</button>
+						<button>9</button>
+					</div>
+					<div>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+					</div>
+					<div>
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+					</div>
+					<div>
+						<button>0</button>
+						<button>.</button>
+						<button>+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+		<div id="container"></div>
+
+		<section id="todoapp">
+			<header id="header">
+				<h1>Todos</h1>
+				<input id="new-todo" placeholder="What needs to be done?">
+				<div>
+                    <a href="#/">show all</a> |
+                    <a href="#/pending">show pending</a> |
+                    <a href="#/completed">show completed</a>
+                    </div>
+                </header>
+			</header>
+			<section id="main">
+				<ul id="todo-list"></ul>
+			</section>
+		</section>
+	
+	</body>
+	
+
+
+</html>
